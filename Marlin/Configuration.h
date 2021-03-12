@@ -512,9 +512,9 @@
     #define DEFAULT_Ki_LIST {   1.54,   1.54 }
     #define DEFAULT_Kd_LIST {  76.55,  76.55 }
   #else
-    #define DEFAULT_Kp  21.73
-    #define DEFAULT_Ki   1.54
-    #define DEFAULT_Kd  76.55
+    #define DEFAULT_Kp  26.13
+    #define DEFAULT_Ki   2.69
+    #define DEFAULT_Kd  63.37
   #endif
 #endif // PIDTEMP
 
@@ -553,9 +553,9 @@
 
   // 120V 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
   // from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
-  #define DEFAULT_bedKp 10.00
-  #define DEFAULT_bedKi .023
-  #define DEFAULT_bedKd 305.4
+  #define DEFAULT_bedKp 169.73
+  #define DEFAULT_bedKi 33.91
+  #define DEFAULT_bedKd 566.32
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -801,7 +801,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT    { 79.75, 79.75, 400, 141.42 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT    { 79.75, 79.75, 400, 138.14 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -836,7 +836,7 @@
  *   M204 R    Retract Acceleration
  *   M204 T    Travel Acceleration
  */
-#define DEFAULT_ACCELERATION          610    // X, Y, Z and E acceleration for printing moves
+#define DEFAULT_ACCELERATION          500    // X, Y, Z and E acceleration for printing moves
 #define DEFAULT_RETRACT_ACCELERATION  1500    // E acceleration for retracts
 #define DEFAULT_TRAVEL_ACCELERATION   500    // X, Y, Z acceleration for travel (non printing) moves
 
@@ -1057,7 +1057,9 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {-60, -20, -2.25}
+#define NOZZLE_TO_PROBE_OFFSET {-58.3, -13.8, -2.15}
+
+// M206 X-2.30 Y-12.00 Z0.00
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
