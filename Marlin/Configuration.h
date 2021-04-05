@@ -1058,7 +1058,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET {-58.3, -13.8, -2.15}
+#define NOZZLE_TO_PROBE_OFFSET {-51.8, -21.3, -2.15}
 
 // M206 X-2.30 Y-12.00 Z0.00
 
